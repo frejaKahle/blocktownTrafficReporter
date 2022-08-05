@@ -22,6 +22,10 @@ h6 {
     margin: 0.325em 1rem;
 }
 
+p {
+    margin: 0.2rem;
+}
+
 .normal-bg {
     background-color: var(--bgcolor);
     border-radius: 10px;
@@ -55,21 +59,50 @@ h6 {
     right: 0;
 }
 
-.valignwrap {
+.halign-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.valign-content {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
 }
 
-form {
-    display: flex;
-    justify-content: space-around;
+.halignwrap {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
-input {
+.calignwrap {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.valignwrap {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+input,
+select {
     background-color: transparent;
     font-size: 60%;
     color: #fff;
     border-style: solid;
     border-radius: 0.5em;
+    border-color: #999;
+}
+
+select option {
+    background-color: var(--bgcolor);
+}
+
+.mb20 {
+    margin-bottom: 20px;
 }
