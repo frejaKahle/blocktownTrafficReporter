@@ -10,21 +10,21 @@
 </head>
 
 <body>
-</body>
-<h1>Andromeda Blocktown Traffic Reporter</h1>
-<h2 style="color:#aaa; margin-top:-0.5em">Roadblock Entry</h2>
 
-<section class="calignwrap">
-    <div class="normal-bg fcontainer valign-content" style="min-height: max(100px, 30vh); min-width: min(max(200px, 60vw),800px);">
-        <h3>Enter Roadblock Information</h3>
-        <form class="halign-content">
-            <div style="font-size: 75%">
-                <p class="mb20" style="margin-top: 0">Delay:</p>
-                <p class="mb20">Location:</p>
-            </div>
-            <div style="flex-grow: 1">
-                <div class="halign-content mb20">
-                    <select id="RB_severity" name="onn">
+    <h1>Andromeda Blocktown Traffic Reporter</h1>
+    <h2 style="color:#aaa; margin-top:-0.5em">Roadblock Entry</h2>
+
+    <section class="calignwrap">
+        <div class="normal-bg fcontainer valign-content" style="min-height: max(100px, 30vh); min-width: min(max(200px, 60vw),800px);">
+            <h3>Enter Roadblock Information</h3>
+            <form class="halign-content" id="RBENTRY">
+                <div style="font-size: 75%">
+                    <p class="mb20" style="margin-top: 0">Delay:</p>
+                    <p class="mb20">Location:</p>
+                </div>
+                <div style="flex-grow: 1">
+                    <div class="halign-content mb20">
+                        <select id="RB_severity" name="onn">
                         <!-- these options are example text, only the value has effect on program function-->
                         <option value="">--Enter roadblock's delay--</option>
                         <option value="1">30 seconds or less</option>
@@ -33,38 +33,43 @@
                         <option value="4">5-10 minutes</option>
                         <option value="5">10 minutes or more</option>
                     </select>
-                </div>
-                <div class="halign-content mb20">
-                    <select id="RB_street" name="and">
+                    </div>
+                    <div class="halign-content mb20">
+                        <select id="RB_street" name="and">
                         <option value="">--Enter street roadblock is on--</option>
                         <option value="1EW">1st Avenue (East to West)</option>
                         <option value="2EW">2nd Avenue (East to West)</option>
                         <option value="3EW">3rd Avenue (East to West)</option>
                         <option value="4EW">4th Avenue (East to West)</option>
                         <option value="5EW">5th Avenue (East to West)</option>
-                        <option value="1EW">1st Street (North to South)</option>
-                        <option value="2EW">2nd Street (North to South)</option>
-                        <option value="3EW">3rd Street (North to South)</option>
-                        <option value="4EW">4th Street (North to South)</option>
-                        <option value="5EW">5th Street (North to South)</option>
+                        <option value="1NS">1st Street (North to South)</option>
+                        <option value="2NS">2nd Street (North to South)</option>
+                        <option value="3NS">3rd Street (North to South)</option>
+                        <option value="4NS">4th Street (North to South)</option>
+                        <option value="5NS">5th Street (North to South)</option>
                     </select>
-                    <select id="RB_section">
+                        <select id="RB_section">
                         <option value="">--Enter street section--</option>
-                        <option value="1">Between 1st and 2nd </option>
-                        <option value="2">Between 2nd and 3rd </option>
-                        <option value="3">Between 3rd and 4th </option>
-                        <option value="4">Between 4th and 5th </option>
+                        <option value="1">Between 1st and 2nd</option>
+                        <option value="2">Between 2nd and 3rd</option>
+                        <option value="3">Between 3rd and 4th</option>
+                        <option value="4">Between 4th and 5th</option>
                     </select>
+                    </div>
+                    <div class="halign-content mb20">
+                        <input type="submit">
+                    </div>
+                    <div class="halign-content">
+                        <span id="RBMSG" style="color: greenyellow;font-size: 70%;margin: 0 auto;"></span>
+                    </div>
                 </div>
-                <div class="halign-content mb20">
-                    <input type="submit">
-                </div>
-            </div>
-
-        </form>
-    </div>
-</section>
-<div class="decoration-bg" style="position: absolute; bottom: 2em;"></div>
+            </form>
+        </div>
+    </section>
+    <div class="decoration-bg" style="position: absolute; bottom: 2em;"></div>
 </body>
+
+<script type="module" src="./firebase.js"></script>
+<script type="module" src="./webui.js"></script>
 
 </html>

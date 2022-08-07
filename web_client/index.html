@@ -13,13 +13,17 @@
     <h1 style="margin-bottom: 20vh;">Andromeda Group</h1>
     <div class="normal-bg fcontainer valign-content" style="min-height: max(100px, 20vh)">
         <h3>Blocktown Traffic Reporter Login</h3>
-        <form class="halign-content">
+        <form class="halign-content" id="BTRlogin">
             <input type="text" id="BTRUID" placeholder="User ID">
             <input type="password" id="BTRPASS" placeholder="Passphrase">
             <input type="submit" id="BTRLOG" value="Login">
         </form>
+        <span id="BTRERR" style="color:red;font-size: 70%;margin: 0 auto;"></span>
     </div>
     <div class="decoration-bg" style="position: absolute; bottom: 2em;"></div>
 </body>
+
+<script type="module" src="./firebase.js"></script>
+<script type="module" src="./index.js"></script>
 
 </html>
